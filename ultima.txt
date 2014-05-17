@@ -1,2 +1,6 @@
 oi, de certo por favor
+<<<<<<< HEAD
 aqui vai dar conflito
+=======
+modifiquei dentro do 2
+>>>>>>> d444029dfbbb6d40a5acdd971914bdc77a8d13a4
