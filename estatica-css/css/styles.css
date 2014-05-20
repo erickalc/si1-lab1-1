@@ -1,0 +1,13 @@
+#titulo {
+	font-family: Georgia;
+  	color: rgba(0,200,0,0.4);
+}
+#descricao {
+	margin:20px;background-color:rgba(0,200,0,0.4);
+}
+
+#link {
+	text-align: center; 
+	border:5px solid rgba(0,200,0,0.4);
+	
+}
