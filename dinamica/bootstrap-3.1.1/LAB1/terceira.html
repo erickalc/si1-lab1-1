@@ -3,14 +3,9 @@
 	
   <head>		
   	
-  	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
   	
-    <title>Justified Nav Template for Bootstrap</title>
+    <title>Espectativa</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +23,7 @@
     <![endif]-->
     <!-- jQuery -->
 	<script src="javascript/jquery.js"></script>
-	<!-- meu prÃ³prio css e javascript -->	
+	<!-- meu próprio css e javascript -->	
 	<script src="javascript/javascript.js"></script>
 	
   </head>
@@ -40,7 +35,7 @@
         <h3 class="text-muted">Espectativa</h3>
         <ul class="nav nav-justified">
           <li class="active"><a href="./index.html">Home</a></li>
-          <li><a href="#">Cadastro</a></li>
+          <li><a href="./segunda.html">Cadastro</a></li>
         </ul>
       </div>
 		 
@@ -53,36 +48,39 @@
   		<div class="input-group input-group-lg">
   		<span class="input-group-addon">Espero aprender:</span>
   		<input type="text" id="nome" class="form-control" value="" required="required"> 
-  		
-  		<button type="button" onclick="adicionaConteudo()" class="btn btn-primary">OK</button>
   				
   		</div>
+  		<button type="button" onclick="inserir()" class="btn btn-lg btn-success">Inserir</button>
   		</div>
   		
   		<br><br><br><br><br>
-  		
-  		<!-- div remover conteudo -->
-		<div id="remConteudo" > 
-				<div class="input-group input-group-lg">
-  				<span class="input-group-addon">Remover conteudo:</span>
-				<input type="text" id="nomeConteudo" class="form-control" value="" required="required">
-
-				<button type="button" onclick="removerConteudo()" class="btn btn-primary">OK</button>
+  	
+  				
+	<form name="ContentGrabber" action="#" method="get">
+	<fieldset>
+	<p>
+		<h3 >Temas a aprender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temas aprendidos:</h3>
+		<select name="Aprender" id="Aprender"  size="10" style="width:550px" multiple="multiple">
 			
-		</div>
-		</div>
-		<br><br><br><br><br><br>
+		</select>&nbsp;&nbsp;&nbsp;
 		
-		<!-- div conteudos inseridos -->
-		<div id="conteudos" > 
-			<h3 class="text-center">Temas a aprender:</h3>
-		</div>
+		<select name="Aprendido" id="Aprendido" size="10" style="width:570px" multiple="multiple">
+		</select>
+	</p>
+	<p>
+		<input type="button" class="btn btn-lg btn-success" value="&#8250;&#8250;" onClick="swapSelectOptions('Aprender','Aprendido', true)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8250;" onClick="swapSelectOptions('Aprender','Aprendido', false)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8249;" onClick="swapSelectOptions('Aprendido','Aprender', false)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8249;&#8249;" onClick="swapSelectOptions('Aprendido','Aprender', true)" />
 		
-		<br><br><br><br><br><br>
-		<!-- div conteudos vistos -->
-		<div id="conteudosvistos" > 
-			<h3 class="text-center">Temas aprendidos:</h3>
-		</div>
+	</p>
+	</fieldset>
+</form>
+
+<button class="btn btn-lg btn-success" onclick="remover()">Remover conteudo selecionado</button>
+
+	
+
 		     
       <!-- Site footer -->
       <div class="footer">
@@ -95,28 +93,7 @@
 	}
 </style>
 		
-      <form name="ContentGrabber" action="#" method="get">
-	<fieldset>
-	<p>
-		<select name="AvailableOptions" id="AvailableOptions" size="8" multiple="multiple">
-			<option value="option1">option1x</option>
-			<option value="option2">option2x</option>
-			<option value="option3">option3x</option>
-			<option value="option4">option4x</option>
-			<option value="option5">option5x</option>
-		</select>
-		<select name="SelectedOptions" id="SelectedOptions" size="8" multiple="multiple">
-		</select>
-	</p>
-	<p>
-		<input type="button" value="&#8250;&#8250;" onClick="swapSelectOptions('AvailableOptions','SelectedOptions', true)" />
-		<input type="button" value="&#8250;" onClick="swapSelectOptions('AvailableOptions','SelectedOptions', false)" />
-		<input type="button" value="&#8249;" onClick="swapSelectOptions('SelectedOptions','AvailableOptions', false)" />
-		<input type="button" value="&#8249;&#8249;" onClick="swapSelectOptions('SelectedOptions','AvailableOptions', true)" />
-	</p>
-	</fieldset>
-</form>
-
+      
 
     </div> <!-- /container -->
     

@@ -11,6 +11,7 @@ function adicionaConteudo() {
 		$divConteudo = $('#' + $id);
 		$divConteudo.append("<h3>" + + $nome );
 		$divConteudo.append("<br /> ");		
+		
 
 		limpaForms();
 		$divConteudo.hide().fadeIn();
@@ -21,6 +22,26 @@ function limpaForms() {
 	$('#nome').val('');
 	
 }
+
+
+function inserir()
+{
+var x = document.getElementById("Aprender");
+var option = document.createElement("option");
+option.text = $('#nome').val();
+x.add(option);
+$('#nome').val('');
+}
+
+
+function remover()
+{
+var x = document.getElementById("Aprender");
+var y = document.getElementById("Aprendido");
+x.remove(x.selectedIndex);
+y.remove(y.selectedIndex);
+}
+
 
 function selectAll(selectBox,selectAll) { 
     // have we been passed an ID 
@@ -53,21 +74,7 @@ function swapSelectOptions(selectFrom,selectTo,swapAll) {
 	}
 }
 
-function submitenter(myfield,e)
-{
-var keycode;
-if (window.event) keycode = window.event.keyCode;
-else if (e) keycode = e.which;
-else return true;
 
-if (keycode == 13)
-{
-myfield.form.submit();
-return false;
-}
-else
-return true;
-}
 
 function removerConteudo(){
 	$nome = $('#nomeConteudo').val();
