@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	
-  <head>		
-  	
-
-  	
+  <head>			
     <title>Espectativa</title>
 
     <!-- Bootstrap core CSS -->
@@ -13,14 +10,6 @@
     <!-- Custom styles for this template -->
     <link href="justified-nav.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <!-- jQuery -->
 	<script src="javascript/jquery.js"></script>
 	<!-- meu próprio css e javascript -->	
@@ -68,10 +57,10 @@
 		</select>
 	</p>
 	<p>
-		<input type="button" class="btn btn-lg btn-success" value="&#8250;&#8250;" onClick="swapSelectOptions('Aprender','Aprendido', true)" />
-		<input type="button" class="btn btn-lg btn-success" value="&#8250;" onClick="swapSelectOptions('Aprender','Aprendido', false)" />
-		<input type="button" class="btn btn-lg btn-success" value="&#8249;" onClick="swapSelectOptions('Aprendido','Aprender', false)" />
-		<input type="button" class="btn btn-lg btn-success" value="&#8249;&#8249;" onClick="swapSelectOptions('Aprendido','Aprender', true)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8250;&#8250;" onClick="trocaSelect('Aprender','Aprendido', true)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8250;" onClick="trocaSelect('Aprender','Aprendido', false)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8249;" onClick="trocaSelect('Aprendido','Aprender', false)" />
+		<input type="button" class="btn btn-lg btn-success" value="&#8249;&#8249;" onClick="trocaSelect('Aprendido','Aprender', true)" />
 		
 	</p>
 	</fieldset>
@@ -79,22 +68,12 @@
 
 <button class="btn btn-lg btn-success" onclick="remover()">Remover conteudo selecionado</button>
 
-	
-
 		     
       <!-- Site footer -->
       <div class="footer">
         <p>&copy; Company 2014</p>
       </div>
       
-      <style type="text/css">
-	select {
-		width: 200px;
-	}
-</style>
-		
-      
-
     </div> <!-- /container -->
     
 	

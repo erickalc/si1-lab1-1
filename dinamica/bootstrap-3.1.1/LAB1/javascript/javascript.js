@@ -1,28 +1,3 @@
-function adicionaConteudo() {
-	$nome = $('#nome').val();
-	
-	$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
-
-	if ($('#' + $id).length) { // se já existir uma div com esse id lança uma msg de erro
-		alert("Conteudo já existe!");
-	} else {
-
-		$('#conteudos').append('<div id="' + $id + '"> </div>');
-		$divConteudo = $('#' + $id);
-		$divConteudo.append("<h3>" + + $nome );
-		$divConteudo.append("<br /> ");		
-		
-
-		limpaForms();
-		$divConteudo.hide().fadeIn();
-	}
-}
-
-function limpaForms() {
-	$('#nome').val('');
-	
-}
-
 
 function inserir()
 {
@@ -33,7 +8,6 @@ x.add(option);
 $('#nome').val('');
 }
 
-
 function remover()
 {
 var x = document.getElementById("Aprender");
@@ -41,7 +15,6 @@ var y = document.getElementById("Aprendido");
 x.remove(x.selectedIndex);
 y.remove(y.selectedIndex);
 }
-
 
 function selectAll(selectBox,selectAll) { 
     // have we been passed an ID 
@@ -56,7 +29,7 @@ function selectAll(selectBox,selectAll) {
     }
 }
 
-function swapSelectOptions(selectFrom,selectTo,swapAll) {
+function trocaSelect(selectFrom,selectTo,swapAll) {
 	if (typeof(selectFrom) == "string") {
 		availableitems = document.getElementById(selectFrom);
 	}
@@ -73,11 +46,3 @@ function swapSelectOptions(selectFrom,selectTo,swapAll) {
 		}
 	}
 }
-
-
-
-function removerConteudo(){
-	$nome = $('#nomeConteudo').val();
-	$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
-	$('#'+ $id).fadeOut();	
-} 
